@@ -1,12 +1,13 @@
 ![logo](_media/logo.png)
 
-# 1111
+# tzc_xyh
 
-## 教程序员快速搭建博客
+## 记录工作和生活中的琐碎
 
-- 本仓库以基于 docsify 构建的所见即所得博客，程序员👨🏻‍💻伙伴可以通过克隆仓库，配置基础的信息就可以拥有一个这样的博客了！
-    
-[![stars](https://badgen.net/github/stars/fuzhengwei/fuzhengwei.github.io?icon=github&color=4ab8a1)](https://github.com/fuzhengwei/fuzhengwei.github.io) [![forks](https://badgen.net/github/forks/fuzhengwei/fuzhengwei.github.io?icon=github&color=4ab8a1)](https://github.com/fuzhengwei/fuzhengwei.github.io) 
+- 本仓库以基于 docsify 构建的所见即所得博客
 
-[GitHub](<https://github.com/fuzhengwei/fuzhengwei.github.io>)
+[![star](https://gitee.com/tzc_xyh/tzc_xyh/badge/star.svg?theme=dark)](https://gitee.com/tzc_xyh/tzc_xyh)
+[![fork](https://gitee.com/tzc_xyh/tzc_xyh/badge/fork.svg?theme=dark)](https://gitee.com/tzc_xyh/tzc_xyh)
+
+[GitHub](<https://github.com/tzc_xyh/tzc_xyh>)
 [开始阅读](README.md)

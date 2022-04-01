@@ -7,7 +7,7 @@
 - :memo: 工作记录
    - 第1章：java8
    
-       - [stream](/md/idea-plugin/2021-08-27-技术调研IDEA插件怎么开发.md)
+       - [Stream](/md/work/java8的stream.md)
        
    
    

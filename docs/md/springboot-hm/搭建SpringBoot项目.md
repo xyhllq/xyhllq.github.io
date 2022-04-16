@@ -1,4 +1,5 @@
-# 一.SpringBoot入门程序
+
+## 一.SpringBoot入门程序
 
 ### 1.SpringBoot设计目的
   用来*简化*Spring应用的*初始搭建*以及*开发过程*
@@ -15,7 +16,7 @@
 ![idea隐藏文件](../../assets/img/springboot-hm/idea隐藏文件.jpg)
 
 
-# 二.入门程序解析
+## 二.入门程序解析
 
 ### 1.parent
 ```

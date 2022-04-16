@@ -120,7 +120,7 @@ public String getById(@PathVariable Integer id){
 
 ## 三.简化开发
 
-###1.@RestController
+### 1.@RestController
 类型：类注解  
 位置：基于SpringMVC的RESTful开发控制器类定义上方  
 作用：设置当前控制器类为RESTful风格，等同于@Controller与@ResponseBody两个注解组合功能  
@@ -132,7 +132,7 @@ public class BookController{
 }
 ```
 
-###2.@GetMapping、@PostMapping、@PutMapping、@DeleteMapping
+### 2.@GetMapping、@PostMapping、@PutMapping、@DeleteMapping
 类型：方法注解  
 位置：基于SpringMVC的RESTful开发控制器方法定义上方  
 作用：设置当前控制器方法请求访问路径与请求动作，每种对应一个请求动作  

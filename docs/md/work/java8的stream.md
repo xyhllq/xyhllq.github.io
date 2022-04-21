@@ -1,5 +1,6 @@
 
 ## 一.分组
+
 ### 1.多条件分组
 ```
 
@@ -36,4 +37,26 @@ sortList = sortList.stream()
                 )
                 .collect(Collectors.toList());
 
+```
+
+## 三.其他
+
+### 1.单独取出对象中一个属性成为集合或数组
+```
+//取出name属性,name为String类型
+List<String> list = entityList.stream().map(TestEntity::getName).collect(Collectors.toList());
+
+```
+
+### 2.List＜Integer＞转List＜String＞
+```
+
+List<String> stringList = integerList.stream().map(String::valueOf).collect(Collectors.toList());
+
+```
+
+### 3.单独取出对象中一个[非String]属性成为[String]集合或数组
+```
+//sex为Integer类型
+List<String> list = entityList.stream().map(TestEntity::getSex).map(String::valueOf).collect(Collectors.toList());
 ```

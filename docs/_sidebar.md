@@ -9,6 +9,7 @@
    - [Stream](/md/work/01.java8的stream.md)
    - [拼接字符串](md/work/02.拼接字符串.md)
    - [mysql-dblink](md/work/03.mysql-dblink.md)
+   - [aliyun验证码智能验证](md/work/04.aliyun验证码智能验证.md)
    
 - 第三章：springboot黑马
  

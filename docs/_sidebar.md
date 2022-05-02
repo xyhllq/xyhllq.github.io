@@ -24,7 +24,8 @@
 - netty黑马
 
   - [NIO三大组件](/md/netty-hm/01.NIO三大组件.md)
-  - [ByteBuffer基础](/md/netty-hm/02.ByteBuffer基础.md)
+  - [ByteBuffer演示工具类](/md/netty-hm/02.ByteBuffer演示工具类.md)
+  - [ByteBuffer基础](/md/netty-hm/03.ByteBuffer基础.md)
  
    
   

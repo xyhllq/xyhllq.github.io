@@ -21,7 +21,7 @@
    - [快速开始](/md/aviator/01.快速开始.md)
    - [自带函数(string篇)](/md/aviator/02.自带函数(string篇).md)
 
-* :memo: netty黑马
+* :netty黑马
   * `NIO基础`
     * [NIO三大组件](/md/netty-hm/01.NIO三大组件.md)
     * [ByteBuffer演示工具类](/md/netty-hm/02.ByteBuffer演示工具类.md)

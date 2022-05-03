@@ -31,6 +31,9 @@
       - [ByteBuffer常见方法](/md/netty-hm/04.ByteBuffer常见方法.md)
       - [ByteBuffer分散读集中写](/md/netty-hm/05.ByteBuffer分散读集中写.md)
       - [ByteBuffer黏包半包](/md/netty-hm/06.ByteBuffer黏包半包.md)
+    - 文件编程
+      - [文件编程-FileChannel](/md/netty-hm/07.文件编程-FileChannel.md)
+      - [文件编程-数据传输](/md/netty-hm/08.文件编程-数据传输.md)
  
    
   

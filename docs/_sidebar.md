@@ -22,13 +22,14 @@
    - [自带函数(string篇)](/md/aviator/02.自带函数(string篇).md)
 
 - netty黑马
-  -`NIO基础`
+  - NIO基础
     - [NIO三大组件](/md/netty-hm/01.NIO三大组件.md)
-    - [ByteBuffer演示工具类](/md/netty-hm/02.ByteBuffer演示工具类.md)
-    - [ByteBuffer基础](/md/netty-hm/03.ByteBuffer基础.md)
-    - [ByteBuffer常见方法](/md/netty-hm/04.ByteBuffer常见方法.md)
-    - [ByteBuffer分散读集中写](/md/netty-hm/05.ByteBuffer分散读集中写.md)
-    - [ByteBuffer黏包半包](/md/netty-hm/06.ByteBuffer黏包半包.md)
+    - ByteBuffer
+      - [ByteBuffer演示工具类](/md/netty-hm/02.ByteBuffer演示工具类.md)
+      - [ByteBuffer基础](/md/netty-hm/03.ByteBuffer基础.md)
+      - [ByteBuffer常见方法](/md/netty-hm/04.ByteBuffer常见方法.md)
+      - [ByteBuffer分散读集中写](/md/netty-hm/05.ByteBuffer分散读集中写.md)
+      - [ByteBuffer黏包半包](/md/netty-hm/06.ByteBuffer黏包半包.md)
  
    
   

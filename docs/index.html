@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="/assets/css/vue.css">
   <link rel="stylesheet" href="/assets/css/gitalk.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
   <script>
       var _hmt = _hmt || [];
       (function() {
@@ -34,49 +35,16 @@
         placeholder: '🔍 Type to search ',
         noData: '😞 No Results! ',
         depth: 6
-      },
-      pagination: {
-        previousText: 'PREVIOUS',
-        nextText: 'NEXT',
-        crossChapter: true
-      },
-      // 折叠目录
-      plugins: [
-        function(hook, vm) {
-          hook.doneEach(function() {
-            document.querySelectorAll(".sidebar-nav > ul > li").forEach(
-                    function(node, index, nodelist) {
-                      var span = document.createElement("span");
-                      span.innerHTML = node.firstChild.data;
-                      span.style.cursor = "pointer";
-                      span.onclick = function(event) {
-                        var ul = event.target.nextElementSibling;
-                        if (ul.style.display === "none") {
-                          ul.style.display = "block";
-                        } else {
-                          ul.style.display = "none";
-                        }
-                      };
-                      node.firstChild.replaceWith(span);
-                      node.lastChild.style.display = "none";
-                    });
-            var active = document.querySelector(".sidebar-nav li.active");
-            if (active) {
-              active.parentElement.style.display = "block";
-            }
-          });
-        }
-      ]
-
+      }
     }                                 
   </script>
 
 <script src="/assets/js/md5.js"></script>
 <script src="/assets/js/docsify.min.js"></script>
-<!--<script src="/assets/js/gitalk.min.js"></script>-->
 <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+<!-- plugins -->
+<script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"/>
-<script src="/assets/js/docsify-pagination.min.js"></script>
 <script src="/assets/js/zoom-image.js"></script>
 <script src="/assets/js/prism-bash.js"></script>
 <script src="/assets/js/prism-java.min.js"></script>

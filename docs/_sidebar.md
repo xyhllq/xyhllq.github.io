@@ -27,15 +27,16 @@
   - NIO基础
     - [NIO三大组件](/md/netty-hm/01.NIO三大组件.md)
     - ByteBuffer
-      - [ByteBuffer演示工具类](/md/netty-hm/02.ByteBuffer演示工具类.md)
-      - [ByteBuffer基础](/md/netty-hm/03.ByteBuffer基础.md)
-      - [ByteBuffer常见方法](/md/netty-hm/04.ByteBuffer常见方法.md)
-      - [ByteBuffer分散读集中写](/md/netty-hm/05.ByteBuffer分散读集中写.md)
-      - [ByteBuffer黏包半包](/md/netty-hm/06.ByteBuffer黏包半包.md)
+      - [演示工具类](/md/netty-hm/ByteBuffer/01.ByteBuffer演示工具类.md)
+      - [基础](/md/netty-hm/ByteBuffer/02.ByteBuffer基础.md)
+      - [常见方法](/md/netty-hm/ByteBuffer/03.ByteBuffer常见方法.md)
+      - [分散读集中写](/md/netty-hm/ByteBuffer/04.ByteBuffer分散读集中写.md)
+      - [黏包半包](/md/netty-hm/ByteBuffer/05.ByteBuffer黏包半包.md)
     - 文件编程
-      - [文件编程-FileChannel](/md/netty-hm/07.文件编程-FileChannel.md)
-      - [文件编程-数据传输](/md/netty-hm/08.文件编程-数据传输.md)
-      - [文件编程-Path&Files](/md/netty-hm/09.文件编程-Path&Files.md)
- 
+      - [FileChannel](/md/netty-hm/文件编程/01.文件编程-FileChannel.md)
+      - [数据传输](/md/netty-hm/文件编程/02.文件编程-数据传输.md)
+      - [Path&Files](/md/netty-hm/文件编程/03.文件编程-Path&Files.md)
+    -网络编程
+      - [阻塞](/md/netty-hm/网络编程/01.网络编程-阻塞.md)
    
   

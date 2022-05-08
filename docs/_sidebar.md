@@ -41,5 +41,6 @@
       - [阻塞](/md/netty-hm/网络编程/01.网络编程-阻塞.md)
       - [非阻塞](/md/netty-hm/网络编程/02.网络编程-非阻塞.md)
       - [selector基本使用](/md/netty-hm/网络编程/03.网络编程-selector基本使用.md)
+      - [消息边界问题](/md/netty-hm/网络编程/04.网络编程-消息边界.md)
    
   

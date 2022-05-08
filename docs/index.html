@@ -7,18 +7,31 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="/assets/css/vue.css">
+
+  <style>
+    /*导航栏固定*/
+    .app-nav{
+      position: fixed;
+      margin: 0;
+      /*padding: 10px 50px 10px 0;*/
+      padding: 10px 0 10px 0;/*上、右、下、左*/
+      width: calc(100% - 325px);
+      background-color: #fff;
+      height: 55px;
+      border-bottom: 1px solid #eee;
+    }
+  </style>
 </head>
 <body>
 <div id="app"></div>
 <script>
     window.$docsify = {
       name: 'tzc_xyh',
-      repo: 'https://github.com/tzc_xyh/tzc_xyh',
       auto2top: true,
       coverpage: false,
+      loadNavbar: true,
       loadSidebar: true,
-      maxLevel: 5,
-      routerMode: 'history',
+      maxLevel: 2,
       copyCode: {
         buttonText: {'/' : '点击复制'},
         errorText: {'/' : '错误'},
@@ -37,10 +50,10 @@
 <script src="/assets/js/docsify.min.js"></script>
 <!--搜索-->
 <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
-<!-- 侧边栏折叠 -->
-<script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 <!--复制到剪切板-->
-<script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"/>
+<script src="https://cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+<!--鼠标点击，显示爱心-->
+<script src="/assets/js/click_heart.js"></script>
 <script src="/assets/js/zoom-image.js"></script>
 <script src="/assets/js/prism-bash.js"></script>
 <script src="/assets/js/prism-java.min.js"></script>

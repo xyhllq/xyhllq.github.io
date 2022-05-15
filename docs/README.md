@@ -17,13 +17,16 @@
     - [FileChannel](/md/nio-hm/文件编程/01.文件编程-FileChannel.md)
     - [数据传输](/md/nio-hm/文件编程/02.文件编程-数据传输.md)
     - [Path&Files](/md/nio-hm/文件编程/03.文件编程-Path&Files.md)
--网络编程
+- 网络编程
     - [阻塞](/md/nio-hm/网络编程/01.网络编程-阻塞.md)
     - [非阻塞](/md/nio-hm/网络编程/02.网络编程-非阻塞.md)
     - [selector基本使用](/md/nio-hm/网络编程/03.网络编程-selector基本使用.md)
     - [消息边界问题](/md/nio-hm/网络编程/04.网络编程-消息边界.md)
     - [写入内容过多问题](/md/nio-hm/网络编程/04.网络编程-写入内容过多.md)
-
+    - [多线程优化](/md/nio-hm/网络编程/06.网络编程-多线程优化.md)
+- NIO vs BIO
+    - [NIO vs BIO](/md/nio-hm/NIO vs BIO/01.NIO vs BIO.md)
+    - [AIO](/md/nio-hm/NIO vs BIO/02.AIO.md)
 ----
 
 > [黑马程序员的Spirngboot2]https://www.bilibili.com/video/BV15b4y1a7yG

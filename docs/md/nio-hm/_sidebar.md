@@ -18,5 +18,5 @@
   - [写入内容过多问题](/md/nio-hm/网络编程/05.网络编程-写入内容过多.md)
   - [多线程优化](/md/nio-hm/网络编程/06.网络编程-多线程优化.md)
 - NIO vs BIO
-  - [NIO vs BIO](/md/nio-hm/NIO vs BIO/01.NIO vs BIO.md)
-  - [AIO](/md/nio-hm/NIO vs BIO/02.AIO.md)
+  - [NIO vs BIO](/md/nio-hm/NIOvsBIO/01.NIOvsBIO.md)
+  - [AIO](/md/nio-hm/NIOvsBIO/02.AIO.md)

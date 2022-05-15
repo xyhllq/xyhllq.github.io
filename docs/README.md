@@ -3,7 +3,7 @@
 
 ## 视频学习：bilibili牛皮
 
-> [黑马程序员的Netty](https://www.bilibili.com/video/BV1py4y1E7oA) 视频课程是分成两个主要内容的
+> [黑马程序员的Netty](https://www.bilibili.com/video/BV1py4y1E7oA) 
 
 ### NIO基础
 - [NIO三大组件](/md/nio-hm/01.NIO三大组件.md)
@@ -25,11 +25,14 @@
     - [写入内容过多问题](/md/nio-hm/网络编程/04.网络编程-写入内容过多.md)
     - [多线程优化](/md/nio-hm/网络编程/06.网络编程-多线程优化.md)
 - NIO vs BIO
-    - [NIO vs BIO](/md/nio-hm/NIO vs BIO/01.NIO vs BIO.md)
-    - [AIO](/md/nio-hm/NIO vs BIO/02.AIO.md)
+    - [NIO vs BIO](/md/nio-hm/NIOvsBIO/01.NIOvsBIO.md)
+    - [AIO](/md/nio-hm/NIOvsBIO/02.AIO.md)
+
+> 基础部分已经学习解决...😄😄😄
+
 ----
 
-> [黑马程序员的Spirngboot2]https://www.bilibili.com/video/BV15b4y1a7yG
+> [黑马程序员的Spirngboot2](https://www.bilibili.com/video/BV15b4y1a7yG)
 
 - springboot黑马
   - [基础篇-入门程序](/md/springboot-hm/01.搭建SpringBoot项目.md)

@@ -23,7 +23,7 @@ EventLoop，后续这个Channel上的io事件都由此EventLoop来处理(保证�
 > NioEventLoopGroup() : io事件、普通任务、定时任务
 > DefaultEventLoopGroup() : 普通任务、定时任务
 
-### 2.默认线程数
+### 2.默认线程数(源码)
 
 ```java
     // 获取配置数(需要大于 1 ) 或者 服务器的线程数 * 2
@@ -50,7 +50,7 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class TestEventLoop {
     public static void main(String[] args) {
-        //1.创建事件循环组
+        //1.创建事件循环组--两个线程
         EventLoopGroup group = new NioEventLoopGroup(2);
         //2.演示获取下一个循环对象
         System.out.println("演示获取下一个循环对象:");
@@ -78,6 +78,7 @@ public class TestEventLoop {
 演示获取下一个循环对象:
 io.netty.channel.nio.NioEventLoop@573f2bb1
 io.netty.channel.nio.NioEventLoop@5ae9a829
+//两个线程循环打印
 io.netty.channel.nio.NioEventLoop@573f2bb1
 io.netty.channel.nio.NioEventLoop@5ae9a829
 20:38:52 [INFO ] [nioEventLoopGroup-2-1] m.x.n.c.TestEventLoop - 执行普通任务
@@ -88,6 +89,8 @@ io.netty.channel.nio.NioEventLoop@5ae9a829
 ```
 
 ## 三.IO任务
+
+> 演示`EventLoopGroup`处理IO任务
 
 ### 1.EventLoopServer.class
 ```java
@@ -159,6 +162,7 @@ public class EventLoopClient {
                 .sync()
                 .channel();
         System.out.println(channel);
+        //下面一行大断点，用于调试
         System.out.println("");
     }
 }
@@ -167,6 +171,7 @@ public class EventLoopClient {
 ### 3.注意
 
 dubug模式启动`EventLoopClient`需要进行如下设置：  
+
 ![设置阻塞方式为Thread.png](../../../assets/img/netty-hm/设置阻塞方式为Thread.png)
 
 
@@ -176,7 +181,7 @@ dubug模式启动`EventLoopClient`需要进行如下设置：
 由一个`EventLoopGroup`代表boss，主要负责连接  
 由另一个`EventLoopGroup`代表worker，主要负责初连接外的其他事件
 
-> .group(boss,worker)负载方法
+> .group(boss,worker)重载方法
 
 ```java
 import io.netty.bootstrap.ServerBootstrap;
@@ -220,7 +225,7 @@ public class EventLoopServer {
 
 ### 2.新建EventLoopGroup处理耗时事件，防止阻塞io
 
-> ch.pipeline().addLast(handlerName, handler)
+> ch.pipeline().addLast(handlerName, handler)  
 > ch.pipeline().addLast(group, handlerName, handler)
 
 ```java
@@ -267,7 +272,7 @@ public class EventLoopServer {
 }
 ```
 
-## 五.handler中切换线程
+## 五.handler中切换线程(源码)
 
 关键代码 `io.netty.channel.AbstractChannelHandlerContext #invokeChannelRead()`
 

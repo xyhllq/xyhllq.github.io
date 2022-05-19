@@ -1,7 +1,11 @@
 
 > 不知道写点什么
 
+----
+
 ## 视频学习：bilibili牛皮
+
+----
 
 > [黑马程序员的Netty](https://www.bilibili.com/video/BV1py4y1E7oA) 
 
@@ -28,13 +32,16 @@
     - [NIO vs BIO](/md/nio-hm/NIOvsBIO/01.NIOvsBIO.md)
     - [AIO](/md/nio-hm/NIOvsBIO/02.AIO.md)
 
-> 基础部分已经学习解决...😄😄😄
+----
+
+> 基础部分`NIO`已经学习结束，要开始进入`netty`的学习啦...😄😄😄
 
 ### Netty
 - 入门
     - [概述](/md/netty-hm/入门/01-概述.md)
     - [组件-EventLoop](/md/netty-hm/入门/02-组件-EventLoop.md)
     - [组件-Channel](/md/netty-hm/入门/03-组件-Channel.md)
+    - [组件-Future&Promise](/md/netty-hm/入门/04-组件-Future&Promise.md)
 
 ----
 
@@ -44,17 +51,18 @@
   - [基础篇-入门程序](/md/springboot-hm/01.搭建SpringBoot项目.md)
   - [基础篇-REST风格](/md/springboot-hm/02.REST风格.md)
 
+----
 
 ## 工作中的一些记录
 
-> 会比较杂
+> 会比较杂,等东西多了再分类吧 ！！！～
 
 - java使用记录
     - [Stream](/md/work/01.java8的stream.md) 主要是Stream的一些使用
     - [拼接字符串](md/work/02.拼接字符串.md)
     - [mysql-dblink](md/work/03.mysql-dblink.md)
     - [aliyun验证码智能验证](md/work/04.aliyun验证码智能验证.md)
-    - [Mapper.xml热加载](md/work/05.Mapper.xml热加载.md)个人比较喜欢这个东西
+    - [Mapper.xml热加载](md/work/05.Mapper.xml热加载.md) 💗💗 个人比较喜欢这个东西
     - [误提交文件导致gitignore失效](md/work/06.误提交文件导致gitignore失效.md)
     - [IDEA新建分支后，切换远程分支关联](md/work/07.IDEA新建分支后，切换远程分支关联.md)
    

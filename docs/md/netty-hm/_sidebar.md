@@ -4,3 +4,5 @@
   - [组件-EventLoop](/md/netty-hm/入门/02-组件-EventLoop.md)
   - [组件-Channel](/md/netty-hm/入门/03-组件-Channel.md)
   - [组件-Future&Promise](/md/netty-hm/入门/04-组件-Future&Promise.md)
+  - [组件-Handler&Pipeline](/md/netty-hm/入门/05-组件-Handler&Pipeline.md)
+  - [组件-ByteBuf](/md/netty-hm/入门/06-组件-ByteBuf.md)

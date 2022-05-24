@@ -6,6 +6,7 @@
   - [组件-Future&Promise](/md/netty-hm/入门/04-组件-Future&Promise.md)
   - [组件-Handler&Pipeline](/md/netty-hm/入门/05-组件-Handler&Pipeline.md)
   - [组件-ByteBuf](/md/netty-hm/入门/06-组件-ByteBuf.md)
+  - [课后作业](/md/netty-hm/入门/07-课后作业.md)
   
 - 进阶
   - [粘包半包](/md/netty-hm/进阶/01-粘包半包.md)

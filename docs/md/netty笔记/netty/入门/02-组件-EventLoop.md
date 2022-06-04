@@ -172,7 +172,7 @@ public class EventLoopClient {
 
 dubug模式启动`EventLoopClient`需要进行如下设置：  
 
-![设置阻塞方式为Thread.png](../../../assets/img/netty-hm/设置阻塞方式为Thread.png)
+![设置阻塞方式为Thread.png](../../../../assets/img/netty-hm/设置阻塞方式为Thread.png)
 
 
 ## 四.细化分工

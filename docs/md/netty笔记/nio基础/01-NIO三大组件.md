@@ -27,7 +27,7 @@ selector的作用是配合一个线程来管理多个channel， 获取这些chan
 ### 1.多线程版设计
 每一个socket连接，创建一个线程    
 
-![服务器设计-多线程版](../../assets/img/netty-hm/服务器设计-多线程版.png)
+![服务器设计-多线程版](../../../assets/img/netty-hm/服务器设计-多线程版.png)
 
 缺点：    
 内存占用高、线程上下文切换成本高、只适合连接数少的场景
@@ -35,7 +35,7 @@ selector的作用是配合一个线程来管理多个channel， 获取这些chan
 ### 2.线程池版设计
 创建线程池，处理socket请求，减少线程数。如果是socket长连接的话，会一直占用着线程
 
-![服务器设计-线程池版](../../assets/img/netty-hm/服务器设计-线程池版.png)
+![服务器设计-线程池版](../../../assets/img/netty-hm/服务器设计-线程池版.png)
 
 缺点：    
 阻塞模式下，线程仅能处理一个socket连接、仅适合短连接场景
@@ -44,4 +44,4 @@ selector的作用是配合一个线程来管理多个channel， 获取这些chan
 调用selector的select()会阻塞直到channel发生了读写就绪事件，这些事件发生，
 select方法就会返回这些事件交给thread来处理
 
-![服务器设计-selector版](../../assets/img/netty-hm/服务器设计-selector版.png)
+![服务器设计-selector版](../../../assets/img/netty-hm/服务器设计-selector版.png)

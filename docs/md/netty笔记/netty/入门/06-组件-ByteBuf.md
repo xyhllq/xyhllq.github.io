@@ -78,7 +78,7 @@ ByteBuf buf = ByteBufAllocator.DEFAULT.directBuffer(10);
 ## 四、组成
 > 最开始读写指针都在 0 位置
 
-![ByteBuf组成.png](../../../assets/img/netty-hm/ByteBuf组成.png)
+![ByteBuf组成.png](../../../../assets/img/netty-hm/ByteBuf组成.png)
 
 ## 五、写入
 方法列表，省略一些不重要的方法  
@@ -148,7 +148,7 @@ DefaultChannelPipeline.class
 ```
 
 
-![HeadContext.png](../../../assets/img/netty-hm/HeadContext.png)
+![HeadContext.png](../../../../assets/img/netty-hm/HeadContext.png)
 
 
 ### 2、TailContext
@@ -161,7 +161,7 @@ DefaultChannelPipeline.class
 -> onUnhandledInboundMessage(Object msg)
 ```
 
-![TailContext.png](../../../assets/img/netty-hm/TailContext.png)
+![TailContext.png](../../../../assets/img/netty-hm/TailContext.png)
 
 ## 九、零拷贝
 
@@ -169,7 +169,7 @@ DefaultChannelPipeline.class
 【零拷贝】的体现之一，对原始ByteBuf进行切片成多个ByteBuf，切片后的ByteBuf并没有发生内存复制，还
 是使用原始的ByteBuf的内存，切片后的ByteBuf维护独立的 read、write指针  
 
-![slice.png](../../../assets/img/netty-hm/slice.png)
+![slice.png](../../../../assets/img/netty-hm/slice.png)
 
 例：
 ```java
@@ -223,7 +223,7 @@ read index:0 write index:10 capacity:10
 【零拷贝】的体现之一，就好比截取了原始ByteBuf所有内容，并且没有max capacity的限制，也是ByteBuf
 使用同一块底层内存，只是读写指针是独立的
 
-![duplicate.png](../../../assets/img/netty-hm/duplicate.png)
+![duplicate.png](../../../../assets/img/netty-hm/duplicate.png)
 
 ### 3、copy
 

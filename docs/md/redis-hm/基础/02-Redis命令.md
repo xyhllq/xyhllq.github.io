@@ -209,13 +209,189 @@ HSETNX Test:Student:1 sex man
 
 ## 五、List类型
 
+> Redis中的List类型和Java中的LinkedList类似，可以看做是一个双向链表结构。既可以支持正向检索，也可以支持反向检索  
+> 特征也与LinkedList类似(常用来存储一个有序数据，例如：朋友圈点赞列表，评论列表等)：  
+> * 有序
+> * 元素可以重复
+> * 插入和删除快
+> * 查询速度一般
+
+### 1、LPUSH & LPOP
+
+ * LPUSH ：向列表左侧插入一个元素或者多个元素
+ * LPOP ：移除并返回列表左侧第一个元素，没有则返回nil
+
+```shell
+# 向左推入 3个元素
+127.0.0.1:6379> LPUSH users 1 2 3
+# 返回队列元素个数
+(integer) 3
+# 取左侧第一个
+127.0.0.1:6379> LPOP users
+# 返回第一个元素3 (队列：先进后出 FILO)
+"3"
+```
+
+### 2、RPUSH & RPOP
+
+ * RPUSH ：向列表右侧插入一个元素或者多个元素
+ * RPOP ：移除并返回列表右侧第一个元素，没有则返回nil
+
+```shell
+# 向右推入 3个元素
+127.0.0.1:6379> RPUSH users 4 5 6
+# 返回队列元素个数
+(integer) 5
+# 取右侧第一个
+127.0.0.1:6379> RPOP users
+# 返回第一个元素6 (队列：先进后出 FILO)
+"6"
+```
+
+### 3、LRANGE
+
+ * LRANGE ：返回一段角标范围内的所有元素
+
+```shell
+# 获取 下标 0 到 3 的元素
+127.0.0.1:6379> LRANGE users 0 3
+# 共 4 个， 从左到右
+1) "2"
+2) "1"
+3) "4"
+4) "5"
+```
+
+### 4、BLPOP & BRPOP
+
+ * 与LPOP和RPOP类似，只不过没有元素时等待指定事件，而不是直接返回nil
+
+```shell
+# 控制台1 ：输入等待100秒的user2数据
+127.0.0.1:6379> BLPOP user2 100
+# 等待到的数据输出
+1) "user2"
+2) "2"
+# 等待时间
+(35.20s)
+
+# 控制台2 ：从左插入两个数据
+127.0.0.1:6379> LPUSH user2 1 2
+(integer) 2
+```
+
 ----
 
 
 ## 六、Set类型
 
+> Redis中的Set类型和Java中的HashSet类似，可以看做是一个value为null的HashMap。   
+> 因为也是一个hash表，因此具备HashSet类似的特征：(常用来存储一个有序数据，例如：朋友圈点赞列表，评论列表等)：
+> * 无序
+> * 元素不可重复
+> * 查找快
+> * 支持交集、并集、差集等功能
+
+### 1、SADD & SREM & SCARD
+
+ * SADD ： 向set中添加一个或多个元素
+ * SREM ： 移除set中的指定元素
+ * SCARD ： 返回set中元素个数
+ 
+```shell
+# 插入三个元素
+127.0.0.1:6379> SADD person zhangsan lisi wangwu
+# 返回成功插入个数
+(integer) 3
+# 获取当前存在元素个数
+127.0.0.1:6379> SCARD person
+# 返回当前元素个数
+(integer) 3
+# 移除一个元素
+127.0.0.1:6379> SREM person zhangsan
+# 移除元素成功个数
+(integer) 1
+# 获取当前存在元素个数
+127.0.0.1:6379> SCARD person
+# 返回当前元素个数
+(integer) 2
+```
+
+### 2、SISMEMBER
+
+ * SISMEMBER 判断一个元素是否存在于set中
+
+```shell
+127.0.0.1:6379> SISMEMBER person zhaoliu
+(integer) 0
+127.0.0.1:6379> SISMEMBER person lisi
+(integer) 1
+```
+
+### 3、SMEMBERS
+
+ * SMEMBERS: 获取set中所有元素
+
+```shell
+127.0.0.1:6379> SMEMBERS person
+1) "lisi"
+2) "zhangsan"
+3) "wangwu"
+```
+
+### 4、SINTER & SDIFF & SUNION
+
+ * SINTER ：求集合的交集
+ * SDIFF key1 key2： 求集合的差集(key1中key2不存在的数据)
+ * SUNION ： 求集合的并集
+
+> set命令练习：  
+> 将下列数据用Redis的set集合来存储：
+> * 张三的好友有： 李四、王五、赵六 : `SADD zhangsan lisi wangwu zhaoliu`
+> * 李四的好友有： 王五、麻子、二狗 : `SADD lisi wangwu mazi ergou`
+> 利用Set的命令实现下列功能：
+> * 计算张三的好友有几个人 : `SMEMBERS zhangsan`
+> * 计算张三和李四有哪些共同好友 : `SINTER zhangsan lisi`
+> * 计算哪些人是张三的好友却不是李四的好友 : `SDIFF zhangsan lisi`
+> * 查询张三和李四的好友共有哪些人 : `SUNION zhangsan lisi`
+> * 判断李四是否是张三的好友 : `SISMEMBER zhangsan lisi`
+> * 判断张三是否是李四的好友 : `SISMEMBER lisi zhangsan`
+> * 将李四从张三的好友列表中移除 : `SREM zhangsan lisi`
+
 ----
 
 ## 七、SortedSet类型
 
+> Redis的SortedSet是一个可排序的set集合，与Java中的TreeSet有些类似，但底层数据机构却差别很大。SortedSet中的
+> 每一个元素都带有一个score属性，可以基于score属性对元素排序，底层的实现是一个跳表(SkipList)加hash表。  
+> SortedSet具备下列特性：(经常用来实现排行榜)  
+> * 可排序
+> * 元素不重复
+> * 查询速度快
+
+常见命令：  
+ * ZADD key score member：添加一个或多个元素到sorted set，如果已经存在则更新其score值
+ * ZREM key member：删除sorted set中的一个指定元素
+ * ZSCORE key number：获取sorted set中的指定元素的score值
+ * ZRANK key member：获取sorted set中的指定元素的排名
+ * ZCARD key：获取sorted set中元素个数
+ * ZCOUNT key min max：按照score值在给定范围内的所有元素的个数
+ * ZINCRBY key increment member： 让sorted set中的指定元素自增，步长为指定的increment值
+ * ZRANGE key min max：按照score排序后，获取指定排名范围内的元素
+ * ZRANGEBYSCORE key min max：按照score排序后，获取指定score范围内的元素
+ * ZDIFF、ZINTTER、ZUNION：求差集、交集、并集  
+ ⚠️ 注意：所有的排名默认都是升序，如果要降序则在命令的Z后面添加REV即可
+
+> SortedSet命令练习：  
+> 将班级的下列同学得分存入Redis的SortedSet中：  
+> stu jack 85 lucy 89 rose 82 tom 95 jerry 78 amy 92 miles 76 `ZADD stu 85 jack 89 lucy 82 rose 95 tom 78 jerry 92 amy 76 miles
+`
+> 并实现下列功能：
+> * 删除tom同学 : `ZREM stu tom`
+> * 获取amy同学的分数 : `ZSCORE stu amy`
+> * 获取rose同学的排名 : `ZREVRANk stu rose`
+> * 查询80分一下有几个学生 : `ZCOUNT stu 0 80`
+> * 给amy同学加2分 : `ZINCRBY stu 2 amy`
+> * 查出成绩前3名的同学 : `ZREVRANGE stu 0 2`
+> * 查出成绩80分以下的所有同学 : `ZRANGEBYSCORE stu 0 80`
 ----

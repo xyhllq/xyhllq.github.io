@@ -18,6 +18,8 @@
 
 ### 2、在resources文件夹下添加logback配置
 
+新建`logback.xml`文件 然后复制下面的内容
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="60 seconds" debug="false">

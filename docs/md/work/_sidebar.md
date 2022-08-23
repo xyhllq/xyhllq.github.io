@@ -10,4 +10,5 @@
    - [jacoco使用记录](md/work/08-jacoco使用记录.md)
    - [final-static修饰的静态变量不生效](md/work/09-final-static修饰的静态变量不生效.md)
    - [maven项目集成logback.md](md/work/10-maven项目集成logback.md)
+   - [使用redis实现抽奖](md/work/11-使用redis实现抽奖.md)
    
